@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Shop</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+</head>
+<body>
+
+<!-- Код для примера -->
+<header class="header">
+      <div class="header__top">
+          <div class="header__top__name">
+           <p>7h3 5h0p</p>
+          </div>
+          <div class="header__top__logo">
+             <img src="img/oggetto_logo.svg" alt="">
+          </div>
+          <div class="header__top__number">
+            <p>+7(812)2-12-85-06</p>
+          </div>
+      </div>
+      <div class="header__bottom">
+        <div class="header__bottom__list">
+          <ul>
+            <li><a href="#" style="color:black; text-decoration="none" ">LISP</a></li>
+            <li><a href="#">OCaml</a></li>
+            <li><a href="#">JavaScript</a></li>
+            <li><a href="#">Python</a></li>
+            <li><a href="#">PHP</a></li>
+          </ul>
+
+        </div>
+        <div class="header__bottom__search">
+           <input type="search" name="" value="" >
+        </div>
+      </div>
+</header>
+
+
+
+<main>
+  <div class="list">
+    <ul>
+      <li><a href="#">Lisp</a></li>
+      <p>/</p>
+      <li><a href="#">Одежда</a></li>
+      <p>/</p>
+      <li><a href="#" style="color:black">Футболки</a></li>
+    </ul>
+
+  </div>
+  <div class="content">
+     <div class="content__img">
+       <img src="img/tshirt_green.jpg" alt="" id="content__img_id" >
+       <script type="text/javascript">
+             function color(c){
+             switch(c){
+             case 'green': document.getElementById("content__img_id").src = 'img/tshirt_green.jpg'; break;
+             case 'yellow': document.getElementById("content__img_id").src = 'img/tshirt_yellow.jpg'; break;
+             case 'white': document.getElementById("content__img_id").src = 'img/tshirt_white.jpg'; break;
+               }
+              }
+       </script>
+     </div>
+     <div class="content__discription">
+       <h1>Футболка Alien technology</h1>
+       <p>Состав: 100% хлопок, динамическая типизация, польская нотация.Производство:Россия</p>
+       <span>1500 P</span>
+       <p>Размер</p>
+       <div class="content__discription__size">
+         <div class="content__discription__size_S">
+            <input type="button" name="" value="S" >
+         </div>
+         <div class="content__discription__size_M">
+             <input type="button" name="" value="M" >
+         </div>
+         <div class="content__discription__size_L">
+              <input type="button" name="" value="L" >
+         </div>
+       </div>
+       <p>Цвет</p>
+       <div class="content__discription__color">
+         <div class="content__discription__color_white">
+           <input type="button" name="" value="" onclick="color('white')">
+
+         </div>
+         <div class="content__discription__color_green">
+            <input type="button" name="" value="" onclick="color('green')">
+         </div>
+         <div class="content__discription__color_yellow">
+            <input type="button" name="" value="" onclick="color('yellow')">
+         </div>
+       </div>
+
+         <input type="button" name="" value="Купить" class="content__discription_btn">
+
+         <p class="content__discription_later"><img src="img/heart.svg" alt="" ><a href="#">Отложить на потом</a></p>
+
+   </div>
+  </div>
+</main>
+
+
+<footer class="footer">
+    <div class="footer__list">
+        <div class="footer__list__help">
+                    <div class="footer__list__help_first">
+                            <ul>
+                              <h3>Сервис и поддержка</h3>
+                              <li><a href="#"><p>Как сделать заказ</p></a></li>
+                              <li><a href="#"><p>Возврат товара</p></a></li>
+                              <li><a href="#"><p>Публичная оферта</p></a></li>
+                              <li><a href="#"><p>Доставка</p></a></li>
+                            </ul>
+                     </div>
+                     <div class="footer__list__help_second">
+                            <ul>
+                              <h3><pre> </pre></h3>
+                              <li><a href="#"><p>Способы оплаты</p></a></li>
+                              <li><a href="#"><p>Правила продажи</p></a></li>
+                              <li><a href="#"><p>Возврат денежных средств</p></a></li>
+                              <li><a href="#"><p>Вопросы и ответы</p></a></li>
+                            </ul>
+                    </div>
+        </div>
+
+        <div class="footer__list__info">
+                  <div class="footer__list__info_first"
+                            <ul>
+                              <h3>О компании</h3>
+                              <li><a href="#"><p>О нас</p></a></li>
+                              <li><a href="#"><p>Контакты</p></a></li>
+                              <li><a href="#"><p>Вакансии</p></a></li>
+                              <li><a href="#"><p>Партнерам</p></a></li>
+                            </ul>
+                  </div>
+                  <div class="footer__list__info_second">
+                            <ul>
+                                <h3><pre> </pre> </h3>
+                              <li><a href="#"><p>Сертификаты</p></a></li>
+                              <li><a href="#"><p>Преимущество</p></a></li>
+                              <li><a href="#"><p>Наши скидки</p></a></li>
+                            </ul>
+                    </div>
+          </div>
+
+          <div class="footer__list__plus">
+                    <ul>
+                        <h3><pre> </pre> </h3>
+                        <li><img src="img/delivery.svg" alt="" ><p>Бесплатная доставка от 4000 P</p></li>
+                        <li><img src="img/heart.svg" alt="" ><p>Пробники в подарок при каждой покупке</p></li>
+                        <li><img src="img/cup.svg" alt="" ><p>акции и подарки за покупку</p></li>
+                    </ul>
+          </div>
+
+          <div class="footer__list__social">
+                    <ul>
+                        <h3><pre> </pre> </h3>
+                        <li><a href="#"><img src="img/facebook.svg" alt="" ></a></li>
+                        <li><a href="#"><img src="img/twitter.svg" alt="" ></a></li>
+                        <li><a href="#"><img src="img/instagram.svg" alt="" ></a></li>
+                    </ul>
+          </div>
+
+  </div>
+
+
+</footer>
+
+<!-- <script src="js/scripts.js"></script> -->
+</body>
+</html>
