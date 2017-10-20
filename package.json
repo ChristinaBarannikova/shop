@@ -1,5 +1,5 @@
 {
-  "name": "static-project-template",
+  "name": "shop",
   "version": "0.0.1",
   "description": "Simple project template with Webpack/WDS for static resources and PHP with built in server for templating.",
   "main": "index.js",
@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "gulp"
   },
-  "author": "Andrey Miskov",
+  "author": "Christina Barannikova",
   "license": "ISC",
   "devDependencies": {
     "browser-sync": "^2.18.11",
