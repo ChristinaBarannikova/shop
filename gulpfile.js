@@ -45,12 +45,12 @@ gulp.task('html', () => {
         .pipe(gulp.dest('./dist'));
 });
 
-// gulp.task('html', () => {
-//     gulp.src('src/index.ejs')
-//     .pipe(ejs().on('error', gutil.log))
-//     .pipe(rename('index.html'))
-//         .pipe(gulp.dest('./dist'));
-// });
+gulp.task('html', () => {
+    gulp.src('src/index.ejs')
+    .pipe(ejs().on('error', gutil.log))
+    .pipe(rename('index.html'))
+        .pipe(gulp.dest('./dist'));
+});
 
 // Отслеживание изменений в файлах, нужно только при локальной разработке
 gulp.task('watch', () => {
