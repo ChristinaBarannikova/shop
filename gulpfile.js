@@ -48,7 +48,7 @@ gulp.task('html', () => {
 gulp.task('html', () => {
     gulp.src('src/index.ejs')
     .pipe(ejs().on('error', gutil.log))
-    .pipe(rename('index.ejs'))
+    .pipe(rename('index.html'))
         .pipe(gulp.dest('./dist'));
 });
 
