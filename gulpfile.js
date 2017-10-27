@@ -41,21 +41,20 @@ gulp.task('js', () => {
 });
 
 gulp.task('html', () => {
-    gulp.src('src/index.ejs')
+    gulp.src('src/index.html')
         .pipe(gulp.dest('./dist'));
 });
 
 gulp.task('html', () => {
     gulp.src('src/index.ejs')
     .pipe(ejs().on('error', gutil.log))
-    .pipe(rename('index.html'))
+    .pipe(rename('index.ejs'))
         .pipe(gulp.dest('./dist'));
 });
 
 // Отслеживание изменений в файлах, нужно только при локальной разработке
 gulp.task('watch', () => {
     gulp.watch('src/less/**/*.less', ['styles']);
-    gulp.watch('src/**/*.html', ['html']);
     gulp.watch('src/img/**/*.*', ['img']);
     gulp.watch('src/js/**/*.*', ['js']);
 });
