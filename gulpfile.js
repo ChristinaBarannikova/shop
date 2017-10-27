@@ -41,7 +41,7 @@ gulp.task('js', () => {
 });
 
 gulp.task('html', () => {
-    gulp.src('src/index.html')
+    gulp.src('src/index.ejs')
         .pipe(gulp.dest('./dist'));
 });
 
