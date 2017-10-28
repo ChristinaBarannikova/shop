@@ -11,11 +11,11 @@
 </head>
 <body>
 
-<!-- Код для примера -->
+
 <header class="header">
       <div class="header__top">
           <div class="header__top__name">
-           <p>7h3 5h0p</p>
+           <img src="img/the_shop_logo.svg" alt="">
           </div>
           <div class="header__top__logo">
              <img src="img/oggetto_logo.svg" alt="">
@@ -25,32 +25,37 @@
           </div>
       </div>
       <div class="header__bottom">
-        <div class="header__bottom__list">
-          <ul>
-            <li><a href="#" style="color:black; text-decoration="none" ">LISP</a></li>
-            <li><a href="#">OCaml</a></li>
-            <li><a href="#">JavaScript</a></li>
-            <li><a href="#">Python</a></li>
-            <li><a href="#">PHP</a></li>
+
+          <ul class="header__bottom__list">
+              <% const breadcrumbs = ['LISP', 'OCaml', 'JavaScript','Python', 'PHP'] %>
+              <% breadcrumbs.forEach(function(crumb, index) { %>
+              <li class="bottom__list__item">
+                  <a href="#" class="bottom__list__link"><%= crumb; %></a>
+              </li>
+              <% }); %>
           </ul>
 
-        </div>
         <div class="header__bottom__search">
            <input type="search" name="" value="" >
         </div>
       </div>
 </header>
 <main>
-  <div class="list">
-    <ul>
-      <li><a href="#">Lisp</a></li>
-      <p>/</p>
-      <li><a href="#">Одежда</a></li>
-      <p>/</p>
-      <li><a href="#" style="color:black">Футболки</a></li>
-    </ul>
 
-  </div>
+<div class="main__list">
+  <ul>
+      <% const list = ['LISP', 'Одежда', 'Футболки'] %>
+      <% list.forEach(function(lol, index) { %>
+      <li >
+          <a href="#" ><%= lol; %></a>
+          <% if(index < (breadcrumbs.length - 1)) { %>
+            <span>/</span>
+        <% } %>
+      </li>
+      <% }); %>
+  </ul>
+</div>
+
   <div class="content">
      <div class="content__img">
        <img src="img/tshirt_green.jpg" alt="" id="content__img_id" >

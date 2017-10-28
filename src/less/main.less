@@ -19,16 +19,16 @@ body
 {
     position: absolute;
     margin-left: 80px;
-    color: red;
-    font-size: 24px;
-    font-family: 'Roboto' sans-serif;
+    width: 150px;
+    margin-top: 20px;
     @media @phone-strict
     {
         margin: 7px;
     }
     @media @phone-strict
     {
-        font-size: 14px;
+      margin-top: 20px;
+        width: 75px;
     }// @media @tablet-strict {margin: 10px; font-size: 14px;}
 }
 
@@ -61,7 +61,7 @@ body
     top: 0;
     right: 0;
     text-align: right;
-    color: red;
+    color: #db0000;
     font-size: 24px;
     font-family: Roboto;
     margin-right: 80px;
@@ -119,12 +119,21 @@ body
 
     a
     {
-        color: red;
+        color: #db0000;
     }
 
     a:hover
     {
         color: black;
+    }
+}
+
+.bottom__list__item
+{
+    &::after
+    {
+        content: ' ';
+        display: inline-block;
     }
 }
 
@@ -157,7 +166,7 @@ body
     }
 }
 
-.list
+.main__list
 {
     display: flex;
     width: 80%;
@@ -173,6 +182,7 @@ body
     ul
     {
         padding-left: 0;
+        margin: 10px;
     }
 
     li
@@ -183,7 +193,7 @@ body
 
     a
     {
-        color: red;
+        color: #db0000;
         text-decoration: none;
     }
 
@@ -249,7 +259,7 @@ body
     span
     {
         font-size: 36px;
-        color: red;
+        color: #db0000;
         font-weight: bold;
         margin-bottom: 20px;
     }
@@ -351,7 +361,7 @@ input:focus
     border: rgba(0, 0, 0, .3) 0 solid;
     box-sizing: border-box;
     padding: 10px;
-    background: red;
+    background: #db0000;
     color: #FFF;
     font-family: Roboto, sans-serif;
     font-weight: 400;

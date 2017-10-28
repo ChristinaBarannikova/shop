@@ -5,7 +5,8 @@ const autoprefixer = require('gulp-autoprefixer');
 const rename       = require('gulp-rename');
 const ejs          = require('gulp-ejs');
 const gutil        = require('gulp-util');
-var sourcemaps = require('gulp-sourcemaps');
+const sourcemaps = require('gulp-sourcemaps');
+const imagemin = require('gulp-imagemin');
 
 
 // Автоперезагрузка при изменении файлов в папке `dist`:
@@ -17,6 +18,16 @@ gulp.task('styles', function() {
         .pipe(less())
         .pipe(sourcemaps.write())
         .pipe(gulp.dest('./dist/css'));
+});
+
+gulp.task('watch', function() {
+  gulp.watch('images/*', ['compress']);
+});
+
+gulp.task('compress', function() {
+  gulp.src('./src/img/*')
+  .pipe(imagemin())
+  .pipe(gulp.dest('./dist/img'))
 });
 
 gulp.src('./src/less/*.less')
@@ -55,6 +66,8 @@ gulp.task('js', () => {
     gulp.src('src/js/**/*.*')
         .pipe(gulp.dest('./dist/js'));
 });
+
+
 
 gulp.task('html', () => {
     gulp.src('src/index.ejs')

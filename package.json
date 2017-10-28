@@ -17,9 +17,10 @@
     "browser-sync": "^2.18.11",
     "eslint": "^3.19.0",
     "gulp-autoprefixer": "^4.0.0",
-    "gulp-sourcemaps": "^1.5.0",
     "gulp-ejs": "^3.0.1",
+    "gulp-imagemin": "^3.4.0",
     "gulp-rename": "^1.2.2",
+    "gulp-sourcemaps": "^1.5.0",
     "gulp-util": "^3.0.8",
     "husky": "^0.14.3",
     "stylelint": "^7.13.0"
