@@ -5,6 +5,7 @@ const autoprefixer = require('gulp-autoprefixer');
 const rename       = require('gulp-rename');
 const ejs          = require('gulp-ejs');
 const gutil        = require('gulp-util');
+var sourcemaps = require('gulp-sourcemaps');
 
 // Автоперезагрузка при изменении файлов в папке `dist`:
 // Принцип: меняем файлы в `/src`, они обрабатываются и переносятся в `dist` и срабатывает автоперезагрузка.
@@ -45,6 +46,13 @@ gulp.task('html', () => {
     .pipe(rename('index.html'))
         .pipe(gulp.dest('./dist'));
 });
+
+gulp.src('./less/**/*.less')
+  .pipe(sourcemaps.init())
+  .pipe(less())
+  .pipe(sourcemaps.write())
+  .pipe(gulp.dest('./public/css'));
+
 
 // Отслеживание изменений в файлах, нужно только при локальной разработке
 gulp.task('watch', () => {
