@@ -12,11 +12,11 @@ var sourcemaps = require('gulp-sourcemaps');
 // Принцип: меняем файлы в `/src`, они обрабатываются и переносятся в `dist` и срабатывает автоперезагрузка.
 // Это таск нужен только при локальной разработке.
 
-gulp.src('./less/**/*.less')
+gulp.src('./src/main.less')
   .pipe(sourcemaps.init())
   .pipe(less())
   .pipe(sourcemaps.write())
-  .pipe(gulp.dest('./src/css'));
+  .pipe(gulp.dest('./dist/css'));
 
 
 gulp.task('livereload', () => {
