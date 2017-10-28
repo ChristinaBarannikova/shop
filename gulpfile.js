@@ -51,7 +51,7 @@ gulp.src('./less/**/*.less')
   .pipe(sourcemaps.init())
   .pipe(less())
   .pipe(sourcemaps.write())
-  .pipe(gulp.dest('./css'));
+  .pipe(gulp.dest('./dist/css'));
 
 
 // Отслеживание изменений в файлах, нужно только при локальной разработке
