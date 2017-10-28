@@ -16,7 +16,7 @@ gulp.src('./less/**/*.less')
   .pipe(sourcemaps.init())
   .pipe(less())
   .pipe(sourcemaps.write())
-  .pipe(gulp.dest('./dist/css'));
+  .pipe(gulp.dest('./src/css'));
 
 
 gulp.task('livereload', () => {
